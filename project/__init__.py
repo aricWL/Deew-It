@@ -20,6 +20,7 @@ db = SQLAlchemy(app)
 
 from project.strains.views import strains_blueprint
 
+
 app.register_blueprint(strains_blueprint, url_prefix='/strains')
 
 @app.route('/')
