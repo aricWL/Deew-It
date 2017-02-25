@@ -13,7 +13,7 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/deewit'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = "STRING"
+app.config['SECRET_KEY'] = "shhhh"
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 db = SQLAlchemy(app)
