@@ -22,5 +22,5 @@ manager = Manager(app)
 # allow us to use all the built in commands to flask_migrate
 manager.add_command('db', MigrateCommand)
 
-if __name__ == '__main__':
-    manager.run()
+# if __name__ == '__main__':
+#     manager.run()
