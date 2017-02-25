@@ -1,9 +1,7 @@
 from flask import Flask, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flask_wtf.csrf import CsrfProtect
 
 app = Flask(__name__)
-CsrfProtect(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/deewit'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

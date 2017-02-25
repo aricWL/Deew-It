@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <style>
+    html {
+        background: url('https://wi-images.condecdn.net/image/ZGL1jyjQbkR/crop/1440') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden
+    }
+    
+    #logo {
+        height: 120%;
+        width: 17%;
+        margin-top: -0.8%;
+        margin-left: -0.55%;
+        display: inline-block;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    #nav {
+        background-color: rgba(255, 255, 255, 0.725);
+        width: 100%;
+        height: 11%;
+        margin-top: -1.1%;
+        margin-left: -1.1%;
+        margin-right: 0%;
+        padding: 1%;
+        position: absolute;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    
+    #bgcover {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0%;
+        padding: 1%;
+        position: relative;
+    }
+    
+    .navitems {
+        float: right;
+        width: 70%;
+        margin-top: 2%;
+        margin-right: -14%;
+    }
+    
+    a {
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 250%;
+        text-decoration: none;
+    }
+    
+    li {
+        margin-right: 7%;
+        margin-left: 7%;
+    }
+    
+    li:hover {
+        text-decoration: underline;
+    }
+    
+    div {
+        width: 100%;
+    }
+    
+    .pitchwrap {
+        width: 99%;
+        text-align: center;
+        margin-top: 14%;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    #one {
+        font-size: 250%;
+        font-weight: bold;
+    }
+    
+    #two {
+        margin-top: 3%;
+        font-weight: ;
+        font-size: 225%;
+    }
+    
+    #three {
+        margin-top: 2.5%;
+        font-size: 230%;
+    }
+    
+    button {
+        margin-top: 4%;
+        padding: 0.7% 0% 0.5% 0%;
+        border-style: solid;
+        background: grey;
+        border-width: 2px;
+        border-radius: 55px;
+        border-color: white;
+        text-align: center;
+        width: 5%;
+        height: 3%;
+        font-size: 100%;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        box-shadow: 10 10 10 rgb(100, 100, 100);
+    }
+    
+    .btn {
+        text-align: center;
+    }
+    
+    button:hover {
+        background: #696969;
+        cursor: pointer;
+    }
+    
+    button:focus {
+        outline: 0;
+    }
+    
+    .field {
+        text-align: center;
+        font-size: 250%;
+        font-weight: bold;
+        width: 99%;
+        margin-top: 16%;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .yes1,
+    .no1,
+    .yes2,
+    .no2,
+    .yes3,
+    .no3,
+    .yes4,
+    .no4,
+    .yes5,
+    .no5,
+    .yes6,
+    .no6,
+    .yes7,
+    .no7,
+    .yes8,
+    .no8 {
+        width: 6%;
+        height: 6%;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    .wrapper1,
+    .wrapper2,
+    .wrapper3 {
+        margin-top: 9.5%;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        width: 100%;
+
+    }
+    
+    h1, h3, p{
+        text-align: center;
+    }
+
+    p{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .pic{
+        margin-top: 2%;
+        max-height: 45vh;
+        width: 50%;
+        display: inline-block;
+
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        
+    }
+    .topflex{
+        display:flex;
+        width: 55%;
+        margin-left: 22.5%;
+        
+
+        
+        
+
+    }
+
+    .navbutton{
+        margin-top:-4%;
+        text-align: center;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="bgcover">
+        <div id="nav">
+            <a href="{{url_for('strains.home')}}">
+                <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
+            </a>
+            <ul class="navitems">
+                <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
+                <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
+                <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
+            </ul>
+        </div>
+        <div class="wrapper1">
+            <h1 class="fuck">Congratulations! We've found you some matches.</h1>
+            <div class="topflex">
+                <img class="pic" src="{{results[0].image}}" alt="">
+                <div class="info">
+                    <h1 class="name">{{results[0].name}}</h1>
+                    <h3>{{results[0].strain_type}}</h3>
+                    <p>{{results[0].medicinal_traits}}</p>
+                </div>
+
+            </div>
+
+            <p>{{results[0].description}}</p>
+            <div class="navbutton">
+            <button class="next1">Next</button>
+            </div>
+        </div>
+
+        <div class="wrapper2">
+            <h1 class="fuck">Congratulations! We've found you some matches.</h1>
+            <div class="topflex">
+                <img class="pic" src="{{results[1].image}}" alt="">
+                <div class="info">
+                    <h1 class="name">{{results[1].name}}</h1>
+                    <h3>{{results[1].strain_type}}</h3>
+                    <p>{{results[1].medicinal_traits}}</p>
+                </div>
+
+            </div>
+
+            <p>{{results[1].description}}</p>
+            <div class="navbutton">
+            <button class="previous2">Previous</button>
+            <button class="next2">Next</button>
+            </div>
+        </div>
+
+        <div class="wrapper3">
+            <h1 class="fuck">Congratulations! We've found you some matches.</h1>
+            <div class="topflex">
+                <img class="pic" src="{{results[2].image}}" alt="">
+                <div class="info">
+                    <h1 class="name">{{results[2].name}}</h1>
+                    <h3>{{results[2].strain_type}}</h3>
+                    <p>{{results[2].medicinal_traits}}</p>
+                </div>
+
+            </div>
+
+            <p>{{results[2].description}}</p>
+            <div class="navbutton">
+            <button class="previous3">Previous</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.wrapper2').hide()
+            $('.wrapper3').hide()
+
+
+
+            $('.next1').on('click', function(){
+                $('.fuck').hide()
+                $('.wrapper1').fadeOut(300).promise().done(function(){
+                    $('.wrapper2').fadeIn(600)
+                })
+                
+            })
+
+            $('.next2').on('click', function(){
+                $('.wrapper2').fadeOut(300).promise().done(function(){
+                    $('.wrapper3').fadeIn(600)
+                })
+                
+            })
+
+            $('.previous2').on('click', function(){
+                $('.wrapper2').fadeOut(300).promise().done(function(){
+                    $('.wrapper1').fadeIn(600)
+                })
+                
+            })
+
+            $('.previous3').on('click', function(){
+                $('.wrapper3').fadeOut(300).promise().done(function(){
+                    $('.wrapper2').fadeIn(600)
+                })
+                
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

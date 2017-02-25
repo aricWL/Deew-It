@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        
+    </head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <style>
+    html {
+        background: url('http://www.timestuff.de/wp-content/uploads/2016/05/0ckPWb2.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden
+    }
+    
+    #logo {
+        height: 120%;
+        width: 17%;
+        margin-top: -0.8%;
+        margin-left: -0.55%;
+        display: inline-block;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    #nav {
+        background-color: rgba(255, 255, 255, 0.725);
+        width: 100%;
+        height: 11%;
+        margin-top: -1.1%;
+        margin-left: -1.1%;
+        margin-right: 0%;
+        padding: 1%;
+        position: absolute;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    
+    #bgcover {
+        background-color: rgba(0, 0, 0, 0.65);
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0%;
+        padding: 1%;
+        position: relative;
+    }
+    
+    .navitems {
+        float: right;
+        width: 70%;
+        margin-top: 2%;
+        margin-right: -14%;
+    }
+    
+    a {
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 250%;
+        text-decoration: none;
+    }
+    
+    li {
+        margin-right: 7%;
+        margin-left: 7%;
+    }
+    
+    li:hover {
+        text-decoration: underline;
+    }
+    
+    div {
+        width: 100%;
+    }
+    
+    .pitchwrap {
+        width: 50%;
+        text-align: center;
+        margin-top: 13%;
+        margin-left: 25%;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    #one {
+        font-size: 250%;
+        font-weight: bold;
+    }
+    
+    #two {
+        margin-top: 3%;
+        font-size: 175%;
+    }
+    
+    #three {
+        margin-top: 2.5%;
+        font-size: 230%;
+    }
+    
+    button {
+        margin-top: 4%;
+        padding: 1.5% 0% 1% 0%;
+        border-style: solid;
+        background: grey;
+        border-width: 2px;
+        border-radius: 55px;
+        border-color: white;
+        text-align: center;
+        width: 45%;
+        height: 55%;
+        font-size: 375%;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        box-shadow: 10 10 10 rgb(100, 100, 100);
+    }
+    
+    .btn {
+        text-align: center;
+    }
+    
+    button:hover {
+        background: #696969;
+        cursor: pointer;
+    }
+    
+    button:focus {
+        outline: 0;
+    }
+    
+    .field {
+        text-align: center;
+        font-size: 250%;
+        font-weight: bold;
+        width: 99%;
+        margin-top: 16%;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .yes1,
+    .no1,
+    .yes2,
+    .no2,
+    .yes3,
+    .no3,
+    .yes4,
+    .no4,
+    .yes5,
+    .no5,
+    .yes6,
+    .no6,
+    .yes7,
+    .no7,
+    .yes8,
+    .no8 {
+        width: 6%;
+        height: 6%;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="bgcover">
+        <div id="nav">
+            <a href="{{url_for('strains.home')}}">
+                <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
+            </a>
+            <ul class="navitems">
+                <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
+                <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
+                <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
+            </ul>
+        </div>
+        <div class="pitchwrap">
+            
+            <div class="pitch" id="two">The idea that sparked the creation of Deew It was conceived by Kyle Brancato early 2016. Kyle saw the change happening in the medical marijuana industry, with more and more people getting access to the plant every day. <br> Bills were being passed left and right, things seemed to be going in the right direction, yet the concept of getting a specific diagnosis was almost non existant. Users would have to use trial and error to find out what strains worked best for them.  </div>
+            <div class="pitch" id="two">This is where Deew It comes in. Our algorithms are written to find you the best possible match no matter what your symptoms are. Give it a try, you won't be dissapointed.</div>
+            <div class="pitch" id="three">-The Deew It Team</div>
+        </div>
+    </div>
+</body>
+
+</html>
