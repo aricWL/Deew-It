@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 if os.environ.get('ENV') == 'production':
     debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://joydqifyvytida:2e7a9221223490dcf6f68c84290720e823167f2e4afd6cdab5c586cd3451662e@ec2-23-21-220-23.compute-1.amazonaws.com:5432/d93iv159s51mpg')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://erxpsqntjrpnof:30f5e1cc2e58a3ebb40d6f5b664e0e5e4854f203fe24d03e8fe7d76508e2110d@ec2-23-21-76-49.compute-1.amazonaws.com:5432/d2juupr3u8h2rs')
 else:
     debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://localhost/deewit'
