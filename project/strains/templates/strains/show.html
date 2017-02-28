@@ -19,33 +19,59 @@
     html,
     body {
         margin: 0;
-        
 
-        
+
     }
     
-    #logo {
-        height: 120%;
-        width: 17%;
-        margin-top: -0.8%;
-        margin-left: -0.55%;
+    .navlogo{
+        width: 15vw;
         display: inline-block;
+    }
+
+    #logo{
+        width: 12vw;
+    }
+
+    .navitems{
+        margin-top: 3.3vh;
+    }
+
+    .navstuff{
+
+        width: 40vw;
+        display: inline-block;
+        float: right;
+        color:black;
+        font-family: 'Josefin Sans', sans-serif;
+        text-decoration:none;
+    }
+
+    li{
+        display: inline-block;
+        font-size:5vh;
+        margin-left: 2vw;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    a{
+        font-size:5vh;
+        color:black;
+        text-decoration:none;
     }
     
-    li {
-        display: inline-block;
-    }
     
     #nav {
-        background-color: rgba(255, 255, 255, 0.725);
-        width: 100%;
-        height: 11%;
-        margin-top: -1.1%;
-        margin-left: -1.1%;
-        margin-right: 0%;
-        padding: 1%;
-        position: absolute;
-        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .85);
+        width: 100vw;
+        height: 10.5vh;
+        margin-left: -1vw;
+        margin-top: -1vw;
+        
+        position: center;
+        
         display: inline-block;
     }
     
@@ -57,40 +83,20 @@
         margin-left: 0px;
         margin-right: 0%;
         padding: 1%;
-        
+        position: relative;
     }
     
-    .navitems {
-        float: right;
-        width: 70%;
-        margin-top: 2%;
-        margin-right: -14%;
-    }
     
-    a {
-        color: black;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 250%;
-        text-decoration: none;
-    }
     
-    li {
-        margin-right: 7%;
-        margin-left: 7%;
-    }
     
-    li:hover {
-        text-decoration: underline;
-    }
     
-    div {
-        width: 100%;
-    }
+    
+    
     
     .pitchwrap {
         width: 99%;
         text-align: center;
-        margin-top: 14%;
+        margin-top: 15vh;
         color: white;
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -101,31 +107,31 @@
     }
     
     #two {
-        margin-top: 3%;
+        margin-top: 4%;
         font-weight: ;
         font-size: 225%;
     }
     
     #three {
-        margin-top: 2.5%;
+        margin-top: 4%;
         font-size: 230%;
     }
     
     button {
         margin-top: 4%;
-        padding: 0.7% 0% 0.5% 0%;
+        padding: 1.5% 0% 1% 0%;
         border-style: solid;
         background: grey;
         border-width: 2px;
         border-radius: 55px;
         border-color: white;
         text-align: center;
-        width: 5%;
-        height: 3%;
-        font-size: 100%;
+        width: 40%;
+        height: 35%;
+        font-size: 375%;
         font-family: 'Josefin Sans', sans-serif;
         color: white;
-        box-shadow: 10 10 10 rgb(100, 100, 100);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     }
     
     .btn {
@@ -172,10 +178,20 @@
         margin-right: 4%;
         margin-left: 4%;
     }
+    
+    .yes,
+    .no,
+    .sub1,
+    .sub2 {
+        width: 6%;
+        height: 6%;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
     .wrapper1,
     .wrapper2,
     .wrapper3 {
-        margin-top: 9.5%;
+        margin-top: 2vh;
         font-family: 'Josefin Sans', sans-serif;
         color: white;
         width: 100%;
@@ -230,14 +246,20 @@
 <body>
     <div id="bgcover">
         <div id="nav">
-            <a href="{{url_for('strains.home')}}">
-                <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
-            </a>
-            <ul class="navitems">
-                <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
-                <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
-                <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
-            </ul>
+            <div class="navlogo">
+                <a href="{{url_for('strains.home')}}">
+                    <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
+                </a>
+            </div>
+            <div class="navstuff">
+                <ul class="navitems">
+                    <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
+                    <li>|</li>
+                    <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
+                    <li>|</li>
+                    <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
+                </ul>
+            </div>
         </div>
         <div class="wrapper1">
             

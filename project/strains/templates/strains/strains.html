@@ -24,35 +24,62 @@
         overflow: hidden
     }
     
-    #logo {
-        height: 120%;
-        width: 17%;
-        margin-top: -0.8%;
-        margin-left: -0.55%;
+    .navlogo{
+        width: 15vw;
         display: inline-block;
+    }
+
+    #logo{
+        width: 12vw;
+    }
+
+    .navitems{
+        margin-top: 3.3vh;
+    }
+
+    .navstuff{
+
+        width: 40vw;
+        display: inline-block;
+        float: right;
+        color:black;
+        font-family: 'Josefin Sans', sans-serif;
+        text-decoration:none;
+    }
+
+    li{
+        display: inline-block;
+        font-size:5vh;
+        margin-left: 2vw;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    a{
+        font-size:5vh;
+        color:black;
+        text-decoration:none;
     }
     
-    li {
-        display: inline-block;
-    }
     
     #nav {
-        background-color: rgba(255, 255, 255, 0.725);
-        width: 100%;
-        height: 11%;
-        margin-top: -1.1%;
-        margin-left: -1.1%;
-        margin-right: 0%;
-        padding: 1%;
-        position: absolute;
-        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .85);
+        width: 100vw;
+        height: 10.5vh;
+        margin-left: -1vw;
+        margin-top: -1vw;
+        
+        position: center;
+        
         display: inline-block;
     }
     
     #bgcover {
         background-color: rgba(0, 0, 0, 0.6);
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         margin-top: 0px;
         margin-left: 0px;
         margin-right: 0%;
@@ -60,37 +87,17 @@
         position: relative;
     }
     
-    .navitems {
-        float: right;
-        width: 70%;
-        margin-top: 2%;
-        margin-right: -14%;
-    }
     
-    a {
-        color: black;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 250%;
-        text-decoration: none;
-    }
     
-    li {
-        margin-right: 7%;
-        margin-left: 7%;
-    }
     
-    li:hover {
-        text-decoration: underline;
-    }
     
-    div {
-        width: 100%;
-    }
+    
+    
     
     .pitchwrap {
         width: 99%;
         text-align: center;
-        margin-top: 14%;
+        margin-top: 15vh;
         color: white;
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -101,13 +108,13 @@
     }
     
     #two {
-        margin-top: 3%;
+        margin-top: 4%;
         font-weight: ;
         font-size: 225%;
     }
     
     #three {
-        margin-top: 2.5%;
+        margin-top: 4%;
         font-size: 230%;
     }
     
@@ -121,7 +128,7 @@
         border-color: white;
         text-align: center;
         width: 40%;
-        height: 45%;
+        height: 35%;
         font-size: 375%;
         font-family: 'Josefin Sans', sans-serif;
         color: white;
@@ -167,36 +174,41 @@
     .no7,
     .yes8,
     .no8 {
-        width: 6%;
-        height: 6%;
+        width: 10vh;
+        height: 10vh;
         margin-right: 4%;
         margin-left: 4%;
     }
-
+    
     .yes,
     .no,
     .sub1,
     .sub2 {
-    	width: 6%;
-        height: 6%;
+        width: 10vh;
+        height: 10vh;
         margin-right: 4%;
         margin-left: 4%;
     }
-
     </style>
 </head>
 
 <body>
     <div id="bgcover">
         <div id="nav">
-            <a href="{{url_for('strains.home')}}">
-                <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
-            </a>
-            <ul class="navitems">
-                <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
-                <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
-                <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
-            </ul>
+            <div class="navlogo">
+                <a href="{{url_for('strains.home')}}">
+                    <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
+                </a>
+            </div>
+            <div class="navstuff">
+                <ul class="navitems">
+                    <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
+                    <li>|</li>
+                    <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
+                    <li>|</li>
+                    <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
+                </ul>
+            </div>
         </div>
         <div class="pitchwrap">
             <div class="pitch" id="one">The medical marijuana industry is letting us down.</div>
@@ -302,18 +314,18 @@
                 <p>Are you experiencing any kind of physical pain/aching?</p>
             </div>
             <div class="bottom">
-            	<form class="f1" style="margin: 0; padding: 0; display: inline;" action="{{url_for('strains.results')}}">
-					<input class="valyes" style="display: inline;" type="hidden" name="info" value="">
-	                <a class="sub1" type="submit" style="display: inline;" href="#" class="yes">
-	                    <img style="display: inline;" src="http://www.packitup.dk/img/checkmark.png" alt="" class="yes8">
-	                </a>
-	             </form>
-	             <form class="f2" style="margin: 0; padding: 0; display: inline;" action="{{url_for('strains.results')}}">
-	             	<input class="valno" style="display: inline;" type="hidden" name="info" value="">
-	                <a class="sub2" type="submit" style="display: inline;" href="#" class="no">
-	                    <img style="display: inline;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/White_X_in_red_background.svg/2000px-White_X_in_red_background.svg.png" alt="" class="no8">
-	                </a>
-				</form>
+                <form class="f1" style="margin: 0; padding: 0; display: inline;" action="{{url_for('strains.results')}}">
+                    <input class="valyes" style="display: inline;" type="hidden" name="info" value="">
+                    <a class="sub1" type="submit" style="display: inline;" href="#" class="yes">
+                        <img style="display: inline;" src="http://www.packitup.dk/img/checkmark.png" alt="" class="yes8">
+                    </a>
+                </form>
+                <form class="f2" style="margin: 0; padding: 0; display: inline;" action="{{url_for('strains.results')}}">
+                    <input class="valno" style="display: inline;" type="hidden" name="info" value="">
+                    <a class="sub2" type="submit" style="display: inline;" href="#" class="no">
+                        <img style="display: inline;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/White_X_in_red_background.svg/2000px-White_X_in_red_background.svg.png" alt="" class="no8">
+                    </a>
+                </form>
             </div>
         </div>
     </div>
@@ -488,13 +500,13 @@
             $('.yes8').hide()
             $('.eighth').fadeOut(300)
         })
-        $('.sub1').on('click', function(){
-        	$('.f1').submit()
-        	return false
+        $('.sub1').on('click', function() {
+            $('.f1').submit()
+            return false
         })
-        $('.sub2').on('click', function(){
-        	$('.f2').submit()
-        	return false
+        $('.sub2').on('click', function() {
+            $('.f2').submit()
+            return false
         })
     })
     </script>
