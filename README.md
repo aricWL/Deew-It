@@ -9,4 +9,4 @@ for their ailments.
 Deew It's goal is to fix this problem. Using matching techniques and database queries, Deew It finds marijuana strains
 that best fit the needs of the patient.
 
-Take a look for yourself [here](https://www.google.com) if interested!
+Take a look for yourself [here](https://deewit.herokuapp.com) if interested!
