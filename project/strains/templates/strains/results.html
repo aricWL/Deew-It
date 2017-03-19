@@ -3,88 +3,96 @@
 
 <head>
 
-    <!-- Latest compiled and minified CSS -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <style>
-   html {
-        background: url('https://wi-images.condecdn.net/image/ZGL1jyjQbkR/crop/1440') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-size: 100% 100%;
-    }
-    
-    html,
-    body {
-        margin: 0;
-
-
-    }
-    
-    .navlogo{
-        width: 15vw;
-        display: inline-block;
-    }
-
-    #logo{
-        width: 12vw;
-    }
-
-    .navitems{
-        margin-top: 3.3vh;
-    }
-
-    .navstuff{
-
-        width: 40vw;
-        display: inline-block;
-        float: right;
-        color:black;
-        font-family: 'Josefin Sans', sans-serif;
-        text-decoration:none;
-    }
-
-    li{
-        display: inline-block;
-        font-size:5vh;
-        margin-left: 2vw;
-    }
-
-    li:hover {
-        text-decoration: underline;
-    }
-
-    a{
-        font-size:5vh;
-        color:black;
-        text-decoration:none;
-    }
-    
-    
-    #nav {
-        background-color: rgba(255, 255, 255, .85);
-        width: 100vw;
-        height: 10.5vh;
-        margin-left: -1vw;
-        margin-top: -1vw;
+    @media (max-width: 1921px) {
+        html {
+            background: url('https://wi-images.condecdn.net/image/ZGL1jyjQbkR/crop/1440') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
         
-        position: center;
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden
+        }
         
-        display: inline-block;
-    }
-    
-    #bgcover {
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100vw;
-        height: 100vh;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 0%;
-        padding: 1%;
-        position: relative;
-    }
+        .navlogo{
+            margin-top: -9px;
+            width: 200px;
+            height: 60px;
+            display: inline-block;
+        }
+
+        #logo{
+            height: 120%;
+            width: 200px;
+        }
+
+        .navitems{
+            margin-top: .5vh;
+        }
+
+        .navstuff{
+            text-align: right;
+            margin-right: 2.5vw;
+            margin-top: 7px;
+            width: 50vw;
+            display: inline-block;
+            float: right;
+            color:black;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration:none;
+        }
+
+        li{
+            display: inline-block;
+            font-size:2rem;
+            margin-left: 2vw;
+        }
+
+        li:hover {
+        }
+
+        a{
+            font-size:0.85em;
+            color:black;
+            text-decoration:none;
+        }
+        
+        
+        #nav {
+            background-color: rgba(255, 255, 255, .9);
+            width: 100vw;
+            height: 60px;
+            margin-left: -1vw;
+            margin-top: -1vw;
+            
+            position: center;
+            
+            display: inline-block;
+        }
+        
+        #bgcover {
+            background-color: rgba(0, 0, 0, 0.65);
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0%;
+            padding: 1%;
+            position: relative;
+        }
     
     
     
@@ -238,16 +246,16 @@
         <div id="nav">
             <div class="navlogo">
                 <a href="{{url_for('strains.home')}}">
-                    <img id="logo" src="http://i.imgur.com/tgnG6cT.png" alt="">
+                    <img id="logo" src="http://i.imgur.com/HtDLGnG.png" alt="">
                 </a>
             </div>
             <div class="navstuff">
                 <ul class="navitems">
-                    <li><a href="{{url_for('strains.show')}}"><b>Strains</b></a></li>
-                    <li>|</li>
-                    <li><a href="{{url_for('strains.about')}}"><b>About</b></a></li>
-                    <li>|</li>
-                    <li><a href="{{url_for('strains.contact')}}"><b>Contact</b></a></li>
+                    <li><a href="{{url_for('strains.show')}}">Strains</a></li>
+                    <li></li>
+                    <li><a href="{{url_for('strains.about')}}">About</a></li>
+                    <li></li>
+                    <li><a href="{{url_for('strains.contact')}}">Contact</a></li>
                 </ul>
             </div>
         </div>
