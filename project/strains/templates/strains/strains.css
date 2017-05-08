@@ -1,0 +1,187 @@
+@media (max-width: 9999px) {
+    html {
+        background: url('https://candiasanders.files.wordpress.com/2014/01/marijuana.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden
+    }
+    
+    .navlogo{
+        margin-top: -9px;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+    }
+
+    #logo{
+        height: 120%;
+        width: 200px;
+    }
+
+    .navitems{
+        margin-top: .5vh;
+    }
+
+    .navstuff{
+        text-align: right;
+        margin-right: 2.5vw;
+        margin-top: 7px;
+        width: 50vw;
+        display: inline-block;
+        float: right;
+        color:black;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration:none;
+    }
+
+    li{
+        display: inline-block;
+        font-size:2rem;
+        margin-left: 2vw;
+    }
+
+    li:hover {
+    }
+
+    a{
+        font-size:0.85em;
+        color:black;
+        text-decoration:none;
+    }
+    
+    
+    #nav {
+        background-color: rgba(255, 255, 255, .9);
+        width: 100vw;
+        height: 60px;
+        margin-left: -1vw;
+        margin-top: -1vw;
+        
+        position: center;
+        
+        display: inline-block;
+    }
+    
+    #bgcover {
+        background-color: rgba(0, 0, 0, 0.65);
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0%;
+        padding: 1%;
+        position: relative;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    .pitchwrap {
+        width: 99%;
+        text-align: center;
+        margin-top: 10vh;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    #one {
+        font-size: 2.2vw;
+        font-weight: bold;
+    }
+    
+    #two {
+        margin-top: 4%;
+        font-weight: ;
+        font-size: 2.15vw;
+    }
+    
+    #three {
+        margin-top: 4%;
+        font-size: 2.15vw;
+    }
+    
+    button {
+        margin-top: 4%;
+        padding: 2.2vh 0% 1% 0%;
+        border-style: solid;
+        background: grey;
+        border-width: 2px;
+        border-radius: 60em;
+        border-color: white;
+        text-align: center;
+        width: 40vw;
+        height: 12vh;
+        font-size: 2.75vw;
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    }
+    
+    .btn {
+        width: 100vw;
+        text-align: center;
+    }
+    
+    button:hover {
+        background: #696969;
+        cursor: pointer;
+    }
+    
+    button:focus {
+        outline: 0;
+    }
+    
+    .field {
+        text-align: center;
+        font-size: 2.35vw;
+        width: 99%;
+        margin-top: 20vh;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    .yes1,
+    .no1,
+    .yes2,
+    .no2,
+    .yes3,
+    .no3,
+    .yes4,
+    .no4,
+    .yes5,
+    .no5,
+    .yes6,
+    .no6,
+    .yes7,
+    .no7,
+    .yes8,
+    .no8 {
+        width: 5vw;
+        height: 5vw;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    
+    .yes,
+    .no,
+    .sub1,
+    .sub2 {
+        width: 5vw;
+        height: 5vw;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+}
